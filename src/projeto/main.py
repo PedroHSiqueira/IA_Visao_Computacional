@@ -2,10 +2,6 @@ import cv2
 import numpy as np
 
 VIDEO = "./src/videos/cars.mp4"
-# ARQUIVO_MODELO = 'models/frozen_inference_graph.pb'
-# ARQUIVO_CFG = 'models/ssd_mobilenet_v2_coco.pbtxt'
-# ARQUIVO_LABELS = 'models/coco_labels.txt'
-
 
 def main():
     cap = cv2.VideoCapture(VIDEO)
