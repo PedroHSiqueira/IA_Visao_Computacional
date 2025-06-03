@@ -2,14 +2,11 @@ import cv2
 import numpy as np
 from time import sleep
 
-largura_min=80 #Largura minima do retangulo
-altura_min=80 #Altura minima do retangulo
-
-offset=6 #Erro permitido entre pixel  
-
-pos_linha=550 #Posição da linha de contagem 
-
-delay= 60 #FPS do vídeo
+largura_min=80
+altura_min=80
+offset=6
+pos_linha=550
+delay= 60
 
 detec = []
 carros= 0
@@ -58,7 +55,7 @@ while True:
                 detec.remove((x,y))
                 print("Veiculo Detectado : "+str(carros))        
        
-    cv2.putText(frame1, "Contagem: "+str(carros), (800, 675), cv2.FONT_HERSHEY_SIMPLEX, 2, (255, 255, 255),5)
+    cv2.putText(frame1, "Contagem: "+str(carros), (450, 70), cv2.FONT_HERSHEY_SIMPLEX, 2, (0, 0, 255),5)
     cv2.imshow("Video Original" , frame1)
 
     if cv2.waitKey(1) == 27:
