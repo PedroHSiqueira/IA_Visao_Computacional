@@ -55,11 +55,25 @@ while True:
                 detec.remove((x,y))
                 print("Veiculo Detectado : "+str(carros))
 
-    cv2.putText(frame1, "Contagem: "+str(carros), (450, 70), cv2.FONT_HERSHEY_SIMPLEX, 2, (0, 0, 255),5)
+    cv2.putText(frame1, "Contagem: "+str(carros), (800, 675), cv2.FONT_HERSHEY_SIMPLEX, 2, (255, 255, 255),5)
     cv2.imshow("Video Original" , frame1)
 
     if cv2.waitKey(1) == 27:
         break
+    
+cap2 = cv2.VideoCapture(VIDEO)
+fps = cap2.get(cv2.CAP_PROP_FPS)
+total_frames = int(cap2.get(cv2.CAP_PROP_FRAME_COUNT))
+frame_to_capture = max(0, total_frames - int(fps))  
 
+cap2.set(cv2.CAP_PROP_POS_FRAMES, frame_to_capture)
+ret, last_frame = cap2.read()
+if ret:
+    cv2.putText(last_frame, "Contagem: "+str(carros), (800, 675), cv2.FONT_HERSHEY_SIMPLEX, 2, (255, 255, 255),5)
+    cv2.imwrite("./src/imagens/screenshot_final.png", last_frame)
+    print("Screenshot salva como screenshot_final.png")
+cap2.release()
+
+print("Total de Veiculos: " + str(carros))
 cv2.destroyAllWindows()
 cap.release()
