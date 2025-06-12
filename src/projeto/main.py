@@ -11,7 +11,8 @@ delay= 60
 detec = []
 carros= 0
 
-VIDEO = "./src/videos/video.mp4"
+VIDEO_UM = "./src/videos/video.mp4"
+VIDEO_DOIS = "./src/videos/video2.mp4"
 
 def pega_centro(x, y, w, h):
     x1 = int(w / 2)
@@ -20,7 +21,7 @@ def pega_centro(x, y, w, h):
     cy = y + y1
     return cx,cy
 
-cap = cv2.VideoCapture(VIDEO)
+cap = cv2.VideoCapture(VIDEO_UM)
 subtracao = cv2.bgsegm.createBackgroundSubtractorMOG()
 
 while True:
@@ -61,7 +62,7 @@ while True:
     if cv2.waitKey(1) == 27:
         break
     
-cap2 = cv2.VideoCapture(VIDEO)
+cap2 = cv2.VideoCapture(VIDEO_UM)
 fps = cap2.get(cv2.CAP_PROP_FPS)
 total_frames = int(cap2.get(cv2.CAP_PROP_FRAME_COUNT))
 frame_to_capture = max(0, total_frames - int(fps))  
