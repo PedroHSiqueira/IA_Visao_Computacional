@@ -7,7 +7,8 @@ pos_linha = 550
 delay = 60
 carros = 0
 
-VIDEO = "./src/videos/video.mp4"
+VIDEO_UM = "./src/videos/video.mp4"
+VIDEO_DOIS = "./src/videos/video2.mp4"
 CARS_XML = "./src/models/cars.xml"
 
 def pega_centro(x, y, w, h):
@@ -15,7 +16,7 @@ def pega_centro(x, y, w, h):
     cy = y + int(h / 2)
     return cx, cy
 
-cap = cv2.VideoCapture(VIDEO)
+cap = cv2.VideoCapture(VIDEO_UM)
 car_cascade = cv2.CascadeClassifier(CARS_XML)
 detec = []
 carros_passados = []
