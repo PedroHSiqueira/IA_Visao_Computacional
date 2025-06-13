@@ -37,14 +37,10 @@ Siga os passos abaixo para configurar e executar o projeto em sua máquina local
     cd IA_Visao_Computacional
     ```
 
-2.  **Crie e ative um ambiente virtual (recomendado):**
+2.  **Crie e ative um ambiente virtual:**
 
     ```bash
-    python -m venv venv
-    # No Windows
-    .\venv\Scripts\activate
-    # No macOS/Linux
-    source venv/bin/activate
+    uv venv
     ```
 
 3.  **Instale as dependências:**
