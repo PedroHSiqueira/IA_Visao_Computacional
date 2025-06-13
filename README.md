@@ -33,11 +33,9 @@ Siga os passos abaixo para configurar e executar o projeto em sua máquina local
 1.  **Clone o repositório:**
 
     ```bash
-    git clone https://github.com/seu-usuario/IA_Visao_Computacional.git
+    git clone https://github.com/PedroHSiqueira/IA_Visao_Computacional.git
     cd IA_Visao_Computacional
     ```
-
-    _(Nota: Substitua `https://github.com/seu-usuario/IA_Visao_Computacional.git` pelo URL real do seu repositório, se aplicável.)_
 
 2.  **Crie e ative um ambiente virtual (recomendado):**
 
