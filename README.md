@@ -2,6 +2,10 @@
 
 Este projeto demonstra a aplicação de técnicas de visão computacional para a detecção e contagem de veículos em vídeos. Utiliza a biblioteca OpenCV para processamento de imagem e vídeo, implementando dois métodos principais: subtração de fundo e classificadores em cascata (Haar Cascades).
 
+## Requisitos
+Para executar este projeto, é necessário ter o UV Package Manager instalado. O UV é um gerenciador de pacotes que facilita a instalação e o gerenciamento de dependências em projetos Python.
+Você pode instalar o UV seguindo as instruções disponíveis em [UV Package Manager](https://uv.dev/).
+
 ## Funcionalidades
 
 O projeto oferece as seguintes funcionalidades:
@@ -18,6 +22,7 @@ O projeto oferece as seguintes funcionalidades:
 
 As principais tecnologias e bibliotecas utilizadas neste projeto são:
 
+- **UV Package Manager:** Gerenciador de pacotes utilizado para instalar e gerenciar as dependências do projeto.
 - **Python:** Linguagem de programação principal.
 - **OpenCV (Open Source Computer Vision Library):** Biblioteca essencial para todas as operações de visão computacional, incluindo leitura de vídeo, processamento de imagem, detecção de contornos, subtração de fundo e aplicação de classificadores em cascata.
 - **NumPy:** Biblioteca para computação numérica, utilizada para manipulação eficiente de arrays de dados, fundamental para o processamento de imagens no OpenCV.
